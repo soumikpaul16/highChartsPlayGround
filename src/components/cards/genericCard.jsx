@@ -35,7 +35,7 @@ GenericCard.propTypes = {
 GenericCard.defaultProps = {
 	className: '',
 	body: '',
-	footer: null,
+	footer: '',
 	title: ''
 }
 

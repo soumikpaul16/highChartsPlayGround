@@ -1,11 +1,12 @@
 import React from 'react'
 import logo from '../../assets/images/logo.svg'
 import { GenericCard } from '../../components/cards'
+import { Maps } from '../../components/charts'
 
 const Dashboard = () => (
 	<>
 		<img src={logo} className="App-logo" alt="logo" style={{ width: '10%' }} />
-		<div class="container">
+		<div className="container">
 			<div className="row p-3">
 				<div className="col-lg-4">
 					<GenericCard className={'h-100'} title={'Bar Chart'} body={<>soumik</>} />
@@ -19,7 +20,15 @@ const Dashboard = () => (
 			</div>
 			<div className="row p-3">
 				<div className="col-lg-6">
-					<GenericCard className={'h-100'} title={'Maps'} body={<>soumik</>} />
+					<GenericCard
+						className={'h-100'}
+						title={'Maps'}
+						body={
+							<>
+								<Maps />
+							</>
+						}
+					/>
 				</div>
 				<div className="col-lg-6">
 					<div className="row p-3">
