@@ -1,35 +1,21 @@
 import React from 'react'
 import logo from '../../assets/images/logo.svg'
 import { GenericCard } from '../../components/cards'
-import { Maps } from '../../components/charts'
+import MapPanel from './mapPanel'
+import BarPanel from './barPanel'
 
 const Dashboard = () => (
 	<>
 		<img src={logo} className="App-logo" alt="logo" style={{ width: '10%' }} />
 		<div className="container">
 			<div className="row p-3">
-				<div className="col-lg-4">
-					<GenericCard className={'h-100'} title={'Bar Chart'} body={<>soumik</>} />
-				</div>
-				<div className="col-lg-4">
+				<BarPanel/>
+				<div className="col-lg-6">
 					<GenericCard className={'h-100'} title={'column Chart'} body={<>soumik</>} />
-				</div>
-				<div className="col-lg-4">
-					<GenericCard className={'h-100'} title={'Donut Chart'} body={<>soumik</>} />
 				</div>
 			</div>
 			<div className="row p-3">
-				<div className="col-lg-6">
-					<GenericCard
-						className={'h-100'}
-						title={'Maps'}
-						body={
-							<>
-								<Maps />
-							</>
-						}
-					/>
-				</div>
+				<MapPanel />
 				<div className="col-lg-6">
 					<div className="row p-3">
 						<div className="col-lg">

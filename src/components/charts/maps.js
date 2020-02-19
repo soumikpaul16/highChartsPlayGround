@@ -3,13 +3,13 @@ import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { MapOption } from './optionsConfig'
+import { MapOption } from './optionsCreator'
 import HighchartsMap from 'highcharts/modules/map'
 
 HighchartsMap(Highcharts)
 
-const Maps = ({ options, data, title, minColor, maxColor }) => {
-	const chartOptions = options ? merge(MapOption({}), options) : MapOption({ data, title, minColor, maxColor })
+const Maps = (props) => {
+	const chartOptions = props.options ? merge(MapOption({}), props.options) : MapOption(props)
 
 	return (
 		<div>
